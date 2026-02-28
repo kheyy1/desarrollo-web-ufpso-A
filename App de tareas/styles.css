@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.contenedor {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 450px;
+}
+
+h1 {
+    text-align: center;
+    color: #1a1a1a;
+}
+
+.grupo-entrada {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#botonAgregar {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#botonAgregar:hover {
+    background-color: #0056b3;
+}
+
+.contador {
+    font-size: 14px;
+    color: #555;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background: #f9f9f9;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border-left: 4px solid #007bff;
+}
+
+.boton-eliminar {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.boton-eliminar:hover {
+    background-color: #cc0000;
+}
