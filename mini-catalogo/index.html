@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHSTORE | Elite Hardware</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="hero">
+            <h2>Hardware y periféricos</h2>
+            <p>Componentes de última generación para potenciar tu rendimiento al máximo nivel profesional.</p>
+        </section>
+
+        <div id="catalogo-container"></div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <template id="producto-template">
+        <product-card></product-card>
+    </template>
+
+    <script src="js/main.js"></script>
+    <script>
+        const productos = [
+            { 
+                nombre: "RTX 4090 Black", 
+                precio: "7'500.000", 
+                desc: "Rendimiento extremo con trazado de rayos y núcleos tensores de última generación.",
+                imagen: "https://cdn.mos.cms.futurecdn.net/HwBG4XXcxVBGzwh8UzM3h8-2000-80.jpg"
+            },
+            { 
+                nombre: "Monitor Curvo 49\"", 
+                precio: "4'600.000", 
+                desc: "Experiencia inmersiva total con tecnología OLED y frecuencia de refresco de 240Hz.",
+                imagen: "https://www.muycomputer.com/wp-content/uploads/2019/03/ASUS-ROG-Strix-XG49VQ-Monitor-Curvo-Panor%C3%A1mico-e1552465297143.jpg"
+            },
+            { 
+                nombre: "Teclado Mecánico RGB", 
+                precio: "750.000", 
+                desc: "Respuesta táctil inigualable con switches custom y retroiluminación inteligente.",
+                imagen: "https://www.hd-tecnologia.com/imagenes/articulos/2020/10/CORSAIR-presenta-un-nuevo-teclado-mecanico-para-juegos-el-CORSAIR-K60-RGB-PRO.jpg"
+            }
+        ];
+
+        const contenedor = document.getElementById("catalogo-container");
+        const plantilla = document.getElementById("producto-template");
+
+        productos.forEach(p => {
+            const instancia = plantilla.content.cloneNode(true);
+            const card = instancia.querySelector("product-card");
+            card.setAttribute("nombre", p.nombre);
+            card.setAttribute("precio", p.precio);
+            card.setAttribute("descripcion", p.desc);
+            card.setAttribute("imagen", p.imagen);
+            contenedor.appendChild(instancia);
+        });
+    </script>
+</body>
+</html>
